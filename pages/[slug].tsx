@@ -11,12 +11,12 @@ export async function getServerSideProps(context: any) {
     return {
       redirect: {
         permanent: false,
-        destination: domain + "/" + context.params.slug,
+        destination: domain + "/blog/" + context.params.slug,
       },
     };
   }
 
-  const data = await fetchMeta(domain + "/" + context.params.slug);
+  const data = await fetchMeta(domain + "/blog/" + context.params.slug);
   return {
     props: data,
   };
