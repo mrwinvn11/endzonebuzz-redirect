@@ -1,13 +1,9 @@
 {
-  "version": 2,
-  "public": true,
-  "builds": [
+  "redirects": [
     {
-      "src": "package.json",
-      "use": "@vercel/next",
-      "config": {
-        "installCommand": "yarn install"
-      }
+      "source": "/:path*",
+      "destination": "https://www.tkcnews.us/:path*",
+      "permanent": true
     }
   ]
 }
